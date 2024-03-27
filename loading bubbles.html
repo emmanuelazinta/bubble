@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .loader{
+   
+   width: 100%;
+   height: 100vh;
+   background-color: #161212;
+   position: fixed;
+   top: 0;
+   z-index: 1000;
+   overflow: hidden;
+   transition: opacity 0.5s ease;
+}
+section h1{
+   color: white;
+   margin-top: 200px;
+   font-family: "Poppins", sans-serif;
+}
+.bobbles{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: inherit;
+   width: inherit;
+}
+.bobbles > div{
+   border-radius: 50%;
+}
+
+.big,
+.bigger,
+.biggest{
+   position: absolute;
+}
+.biggest{
+   animation: scale-biggest 2.5s ease-in-out infinite  2s alternate;
+   width: 110px;
+   height: 110px;
+   background-color: white;
+}
+.bigger{
+   width: 80px;
+   height: 80px;
+   background-color: #fff;
+   animation: scale-bigger 2s ease-in-out infinite alternate;
+   box-shadow: 1px 1px 7px #000000e8;
+}
+.big{
+   animation: scale-big 2.5s ease-in-out infinite alternate;
+   box-shadow: 1px 1px 7px #000000e8;
+   width: 50px;
+   height: 50px;
+background-color: #fff;
+}
+@keyframes scale-biggest {
+   from{
+       transform: scale(0);
+   }
+   to{
+       transform: scale(1);
+
+   }
+}
+@keyframes scale-bigger {
+   from{
+       transform: scale(0);
+   }
+   to{
+       transform: scale(1);
+
+   }
+}
+@keyframes scale-big {
+   from{
+       transform: scale(0);
+   }
+   to{
+       transform: scale(1);
+
+   }
+}
+    </style>
+   <section class="loader">
+    <div class="bobbles">
+      <div class="biggest"></div>
+      <div class="bigger"></div>
+      <div class="big"></div>
+      
+      <h1>Loading...</h1>
+    </div>
+  </section>
+  <script>
+
+
+
+
+  </script>
+</body>
+</html>
